@@ -1,0 +1,53 @@
+.layout {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.layout-toolbar {
+  position: absolute;
+  top: 0;
+  height: 42px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 120, 212, 0.2);
+  border-bottom: 1px solid rgba(0, 120, 212, 0.44);
+  box-sizing: border-box;
+
+  & .layout-toolbar-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+  }
+}
+
+.layout-menu {
+  position: absolute;
+  top: 42px;
+  bottom: 22px;
+  left: 0;
+  width: 256px;
+
+  background-color: rgba(255,255,255, 0.1);
+}
+
+.layout-content {
+  position: absolute;
+  top: 42px;
+  bottom: 22px;
+  left: 256px;
+  right: 0;
+
+  overflow: auto;
+}
+
+.layout-footer {
+  background-color: rgba(0, 120, 212, 0.74);
+  position: absolute;
+  bottom: 0;
+  height: 22px;
+  left: 0;
+  right: 0;
+}

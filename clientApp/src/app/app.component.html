@@ -1,0 +1,23 @@
+<div class="background-blur"></div>
+
+<div class="layout">
+  <div class="layout-toolbar">
+    <div class="layout-toolbar-logo">
+      <img src="/assets/icon/docker.svg" alt="Logo" width="28" height="28">
+    </div>
+  </div>
+
+  <div class="layout-menu">
+    <Menu>
+      <MenuItem routerLinkActive="active" routerLink="/dashboard" icon="clarity:dashboard-line">Tableau de bord</MenuItem>
+      <MenuItem routerLinkActive="active" routerLink="/images" icon="carbon:image-service">Images</MenuItem>
+      <MenuItem routerLinkActive="active" routerLink="/containers" icon="octicon:container-24">Containers</MenuItem>
+      <MenuItem routerLinkActive="active" routerLink="/volumes" icon="clarity:container-volume-solid">Volumes</MenuItem>
+      <MenuItem routerLinkActive="active" routerLink="/settings" icon="fluent:settings-24-filled">Paramètres</MenuItem>
+    </Menu>
+  </div>
+  <div class="layout-content">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="layout-footer"></div>
+</div>

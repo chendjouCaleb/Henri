@@ -1,0 +1,43 @@
+﻿﻿.menu {
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  & .menu-container {
+    display: block;
+    width: 100%;
+  }
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  height: 28px;
+  grid-column-gap: 8px;
+  padding: 8px;
+
+  cursor: pointer;
+  border-left: 5px solid transparent;
+
+  & .menu-item-content {
+    display: flex;
+    align-items: center;
+  }
+
+  & .menu-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover, &:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &:active, &.active {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: #0078d4;
+  }
+
+}

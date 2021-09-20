@@ -1,0 +1,38 @@
+﻿<div class="ms-fontWeight-semibold ms-fontSize-24">Images</div>
+
+<ms-table >
+  <ms-tableHead *msTableHeadDef>
+    <ms-tableHeadCell name="#">#</ms-tableHeadCell>
+    <ms-tableHeadCell name="repository" [sortBy]="['repository', 'string']">Référentiel</ms-tableHeadCell>
+    <ms-tableHeadCell name="tag" [sortBy]="['tag', 'string']">Tag</ms-tableHeadCell>
+    <ms-tableHeadCell name="id">Id</ms-tableHeadCell>
+    <ms-tableHeadCell name="created">Crée</ms-tableHeadCell>
+    <ms-tableHeadCell name="size">Taille</ms-tableHeadCell>
+    <msTableHeadCell name="actions" class="text-right">
+      <i class="ms-Icon ms-Icon--SetAction px-2"></i>
+    </msTableHeadCell>
+  </ms-tableHead>
+
+  <ms-tableRow *ms-tableRowDef="let item of images; let i=index" [value]="item">
+    <ms-tableCell>{{i + 1}}</ms-tableCell>
+    <ms-tableCell>{{item.repository}}</ms-tableCell>
+    <ms-tableCell>{{item.tag}}</ms-tableCell>
+    <ms-tableCell>{{item.id}}</ms-tableCell>
+    <ms-tableCell> {{item.createdAt}} </ms-tableCell>
+
+    <ms-tableCell class="ms-fontSize-12"> {{item.size}} </ms-tableCell>
+    <ms-tableCell class="text-right">
+      <button msIconButton theme="transparent" icon="More" [rounded]="true" [MsDropdownTrigger]="more"></button>
+      <MsDropdown #more>
+        <MsContextMenu>
+          <MsContextMenuItem icon="Upload">Pousser</MsContextMenuItem>
+          <MsContextMenuItem icon="BranchPullRequest">Tirer</MsContextMenuItem>
+          <MsContextMenuItem icon="StopSolid">Arrêter</MsContextMenuItem>
+          <MsContextMenuItem icon="Play">Démarrer</MsContextMenuItem>
+          <MsContextMenuItem icon="PlaybackRate1x">Redémarrer</MsContextMenuItem>
+          <MsContextMenuItem theme="error" icon="Delete">Supprimer</MsContextMenuItem>
+        </MsContextMenu>
+      </MsDropdown>
+    </ms-tableCell>
+  </ms-tableRow>
+</ms-table>

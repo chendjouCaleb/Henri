@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+$ms-table-bgColor: transparent;
+$ms-table-cell-hover-backgroundColor: rgba(255, 255, 255, 0.05);
+$ms-table-border-color: rgba(255, 255, 255, 0.2);
+
+@import "~@ms-fluent/components/src/components/styles/fluent";
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+
+
+body {
+  background: url("/assets/4882066.jpg");
+  background-size: cover;
+
+  color: #FFF;
+  padding: 0;
+  margin: 0;
+}
+
+.ms-Fabric {
+  color: #FFF;
+}
+
+.background-blur {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: -1;
+
+  background-color: hsla(0,0%,0%,.58);
+  backdrop-filter: blur(20px);
+}
